@@ -1,0 +1,10 @@
+<nav>
+    <a href=".?action=Home">Home</a>
+    {% if not session['is_valid_user']%}
+        <a href=".?action=Show Registration">Register</a>
+        <a href=".?action=Show Login">Login</a>
+    {% else %}
+        <a href=".?action=Show Tasks">Tasks</a>
+        <a href=".?action=Logout">Logout</a>
+    {% endif %}
+</nav>
